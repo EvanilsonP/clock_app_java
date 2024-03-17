@@ -11,12 +11,15 @@ public class MyFrame extends JFrame {
     Calendar calendar;
     SimpleDateFormat timeFormat;
     SimpleDateFormat dayFormat;
+    SimpleDateFormat dateFormat;
 
     JLabel timeLabel;
     JLabel dayLabel;
+    JLabel dateLabel;
 
     String time;
     String day;
+    String date;
     
     MyFrame() {
         // Shape of the Frame
@@ -27,8 +30,9 @@ public class MyFrame extends JFrame {
         setResizable(false);
 
         // Time and Day Format
-        timeFormat = new SimpleDateFormat("hh:mm:ss a");
+        timeFormat = new SimpleDateFormat("hh:mm:ss");
         dayFormat = new SimpleDateFormat("EEEE");
+        dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         // Color and details of the Date Label
         dayLabel = new JLabel();
@@ -41,9 +45,14 @@ public class MyFrame extends JFrame {
         timeLabel.setBackground(Color.black);
         timeLabel.setOpaque(true);
 
+        // Color and details of the Date Label
+        dateLabel = new JLabel();
+        dateLabel.setFont(new Font("Ink Free",Font.PLAIN,25));
+
         // Adding labels to the frame
         this.add(timeLabel);
         this.add(dayLabel);
+        this.add(dateLabel);
 
         setVisible(true);
         setTime();
@@ -57,6 +66,9 @@ public class MyFrame extends JFrame {
 
             day = dayFormat.format(Calendar.getInstance().getTime());
             dayLabel.setText(day);
+
+            date = dateFormat.format(Calendar.getInstance().getTime());
+            dateLabel.setText(date);
 
             try {
                 // Shows the time and the milliseconds
