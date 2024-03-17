@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.FlowLayout;
 import java.text.SimpleDateFormat;
@@ -8,7 +9,7 @@ public class MyFrame extends JFrame {
 
     Calendar calendar;
     SimpleDateFormat timeFormat;
-    JPanel timeLabel;
+    JLabel timeLabel;
     String time;
     
     MyFrame() {
@@ -19,7 +20,13 @@ public class MyFrame extends JFrame {
         setSize(350, 200);
         setResizable(false);
 
+        timeFormat = new SimpleDateFormat("hh:mm:ss a");
 
+        timeLabel = new JLabel();
+        time = timeFormat.format(Calendar.getInstance().getTime());
+        timeLabel.setText(time);
+
+        this.add(timeLabel);
         setVisible(true);
     };
 };
