@@ -27,10 +27,10 @@ public class MyFrame extends JFrame {
         this.setTitle("My Clock Program");
         this.setLayout(new FlowLayout());
         setSize(350, 200);
-        setResizable(false);
+        setResizable(true);
 
         // Time and Day Format
-        timeFormat = new SimpleDateFormat("hh:mm:ss");
+        timeFormat = new SimpleDateFormat("HH:mm:ss");
         dayFormat = new SimpleDateFormat("EEEE");
         dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
