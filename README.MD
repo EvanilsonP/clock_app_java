@@ -10,4 +10,6 @@ Foi utilizado algumas classes do Java para fazermos o Relógio:
 
 3 - JLabel: Usada para exibir um texto ou uma imagem em uma interface gráfica de usuário (GUI). 
 
-O Relógio segue o padrão hora/minutos/segundos.
+O Relógio segue o padrão hora/minutos/segundos.   
+
+Obs: Nesse projeto aprendi sobre JLabel. Então criei uma pasta dedicada a essa classe e fiz alguns exercícios para entender melhor como essa classe funciona.
